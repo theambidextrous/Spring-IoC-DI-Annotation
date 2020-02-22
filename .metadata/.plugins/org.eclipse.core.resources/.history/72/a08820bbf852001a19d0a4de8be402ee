@@ -1,0 +1,14 @@
+package dev4money.springobjinjection;
+
+public class Human {
+	private TakeBath tb;
+	
+	public void setTb(TakeBath tb) {
+		this.tb = tb;
+	}
+	
+	public void Bathing() {
+		tb.Bathing();
+	}
+		
+}

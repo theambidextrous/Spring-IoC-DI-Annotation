@@ -1,0 +1,10 @@
+package dev4money.entities;
+
+public class Country {
+	private Long Id;
+	private String Name;
+	private String Continent;
+	private String Currency;
+	private String President;
+	private int CallingCode;
+}

@@ -1,0 +1,23 @@
+package dev4money.spring.annotation.classes;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import dev4money.spring.annotation.util.Beans;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+		ApplicationContext aa = new ClassPathXmlApplicationContext("Beans.xml");//using .xml
+		ApplicationContext a = new AnnotationConfigApplicationContext(Beans.class);//using .java
+		//create
+		College c = a.getBean("CollegeBean", College.class);
+		//close
+		((AbstractApplicationContext) a).close();
+		((AbstractApplicationContext) aa).close();
+		//use
+		c.Test();
+	}
+}

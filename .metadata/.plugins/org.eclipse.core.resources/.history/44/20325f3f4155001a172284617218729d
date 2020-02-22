@@ -1,0 +1,5 @@
+package dev4money.spring.annotation.util;
+//USING Bean.java instead of Bean.xml
+public class Bean {
+
+}

@@ -1,0 +1,7 @@
+package dev4money.interfaces;
+
+public interface Activities {
+	void Start();
+	void Continue();
+	void End();
+}

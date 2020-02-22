@@ -1,0 +1,11 @@
+package dev4money.spring.annotation.util;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+//USING Bean.java instead of Bean.xml
+@Configuration
+@ComponentScan(basePackages = "dev4money.spring.annotation.classes")
+public class Bean {
+
+}

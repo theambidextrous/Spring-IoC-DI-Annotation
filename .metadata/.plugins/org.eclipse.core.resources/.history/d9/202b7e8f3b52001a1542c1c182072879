@@ -1,0 +1,64 @@
+import dev4money.entities.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.mapping.Array;
+
+import dev4money.dao.*;
+
+//import org.springframework.context.ApplicationContext;
+//import org.springframework.context.support.ClassPathXmlApplicationContext;
+//
+//import dev4money.interfaces.*;
+
+public class App {
+	public static void main(String[] args) {
+		
+//		#####  Hibernate util
+		Country c = new Country("Kenya", "Africa","KES","William Ruto", 254);
+		CountryDao country = new CountryDao();
+		List Countries = country.FindAll();
+		Countries.forEach(item -> System.out.println(item));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		Play p = new Play();
+//		Activity p = new Eat();
+//		p.Start();
+//		p.Continue();
+//		p.End();
+//######Spring IoC
+//		ApplicationContext a = new ClassPathXmlApplicationContext("Beans.xml");
+//		Play p = a.getBean(Play.class);
+//		p.Start();
+//		p.Continue();
+//		p.End();
+//##### Spring IOC with Interface
+//		ApplicationContext a = new ClassPathXmlApplicationContext("Beans.xml");
+//		Activity ac = a.getBean("activity", Activity.class);
+//		ac.Start();
+//		ac.Continue();
+//		ac.End();
+	}
+}

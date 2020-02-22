@@ -1,0 +1,10 @@
+package dev4money.spring.annotation.classes;
+
+import org.springframework.stereotype.Component;
+
+@Component("collegebean")
+public class College {
+	public void Test() {
+		System.out.println("Tested weeeeeeell");
+	}
+}

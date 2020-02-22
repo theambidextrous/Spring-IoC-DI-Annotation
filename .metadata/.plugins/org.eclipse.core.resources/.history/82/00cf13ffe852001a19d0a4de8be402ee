@@ -1,0 +1,15 @@
+package dev4money.springobjinjection;
+
+public class TestApp {
+
+	public static void main(String[] args) {
+//		manually inject objects into Person class ==> Takebath & take 
+		Person p = new Person();
+		TakeBath tb = new TakeBath();
+		TakeBreakfast tbf = new TakeBreakfast();
+		p.setTb(tb);
+		p.setTbf(tbf);
+		p.Bathing();
+		p.EatingBreakfast();
+	}
+}

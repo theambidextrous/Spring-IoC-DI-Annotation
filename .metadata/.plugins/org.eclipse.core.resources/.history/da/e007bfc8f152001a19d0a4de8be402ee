@@ -1,0 +1,21 @@
+package dev4money.springobjinjection;
+
+public class AnotherPerson {
+	private TakeBath tb2;
+	private TakeBreakfast tbf2;
+	
+	public void setTb(TakeBath tb2) {
+		this.tb2 = tb2;
+	}
+	public void setTbf(TakeBreakfast tbf2) {
+		this.tbf2 = tbf2;
+	}
+	
+	public void Bathing() {
+		tb2.Bathing();
+	}
+	
+	public void EatingBreakfast() {
+		tbf2.Eating();
+	}
+}

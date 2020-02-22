@@ -1,0 +1,8 @@
+package dev4money.dao;
+
+public class CountryDao {
+	public boolean Create() {
+		
+		return true;
+	}
+}

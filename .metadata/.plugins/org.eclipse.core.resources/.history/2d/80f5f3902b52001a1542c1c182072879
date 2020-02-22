@@ -1,0 +1,21 @@
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import dev4money.classes.*;
+import dev4money.interfaces.*;
+
+public class App {
+	public static void main(String[] args) {
+//		Play p = new Play();
+//		Activity p = new Eat();
+//		p.Start();
+//		p.Continue();
+//		p.End();
+//		Spring IoC
+		ApplicationContext a = new ClassPathXmlApplicationContext("/dev4money/src/main/java/dev4money/classes/Beans.xml");
+		Play p = a.getBean(Play.class);
+		p.Start();
+		p.Continue();
+		p.End();
+	}
+}

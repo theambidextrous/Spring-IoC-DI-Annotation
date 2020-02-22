@@ -1,0 +1,13 @@
+package dev4money.springautowired;
+
+public class Mammal {
+	private Heart heart;
+	
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void StartPumping() {
+		heart.isPumping();
+	}
+}

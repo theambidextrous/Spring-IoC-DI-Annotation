@@ -1,0 +1,34 @@
+package dev4money.springautowired;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Mammal {
+	private Heart heart;
+	
+	public Mammal() {
+		// TODO Default::::::::::::::::Auto-generated constructor stub
+	}
+	
+//	@Autowired
+	public Mammal(Heart heart) {
+		this.heart = heart;
+	}
+//	@AUTOWIRE can also be used before setter method as bellow
+	@Autowired
+	@Qualifier("humanHeart") // this is used to direct which object in class is to be wired
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void StartPumping() {
+		if( heart != null)
+		{
+			heart.isPumping();
+			System.out.println("The name of animal is : " + heart.getNameofMammal() + ". it has " + heart.getNoOfhearts() );
+		}else
+		{
+			System.out.println("Mammal is not breathing. It is dead!");
+		}
+	}
+}

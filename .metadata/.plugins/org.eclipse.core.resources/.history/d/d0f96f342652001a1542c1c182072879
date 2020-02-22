@@ -1,0 +1,12 @@
+import dev4money.classes.Play;
+import dev4money.interfaces.Activity;
+
+public class App {
+	public static void main(String[] args) {
+//		Play p = new Play();
+		Activity p = new Play();
+		p.Start();
+		p.Continue();
+		p.End();
+	}
+}

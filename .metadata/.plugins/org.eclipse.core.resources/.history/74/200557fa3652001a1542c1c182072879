@@ -1,0 +1,21 @@
+package dev4money.dao;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import dev4money.entities.Country;
+import dev4money.utility.HibernateUtil;
+
+public class CountryDao {
+	public boolean Create() {
+		try( Session s = new HibernateUtil().getSessionFactory().openSession()){
+			Transaction t = s.beginTransaction();
+			s.saveOrUpdate(Country.class);
+			t.commit();
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+}

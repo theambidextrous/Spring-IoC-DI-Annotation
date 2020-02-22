@@ -1,0 +1,8 @@
+package dev4money.springautowired;
+
+public class Heart {
+	
+	public void isPumping() {
+		System.out.println("Heart is pumping. The mammal is alive!");
+	}
+}

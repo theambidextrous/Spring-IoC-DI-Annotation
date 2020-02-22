@@ -1,0 +1,25 @@
+package dev4money.springautowired;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Mammal {
+	private Heart heart;
+	
+	@Autowired
+	public Mammal(Heart heart) {
+		this.heart = heart;
+	}
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void StartPumping() {
+		if( heart != null)
+		{
+			heart.isPumping();
+		}else
+		{
+			System.out.println("Mammal is not breathing. It is dead!");
+		}
+	}
+}

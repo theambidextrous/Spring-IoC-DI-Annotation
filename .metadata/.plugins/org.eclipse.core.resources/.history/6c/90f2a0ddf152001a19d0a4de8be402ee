@@ -1,0 +1,7 @@
+package dev4money.springobjinjection;
+
+public class AnotherPerson {
+	private TakeBath atb;
+	private TakeBreakfast atbf;
+	
+}

@@ -1,0 +1,31 @@
+package dev4money.springautowired;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class Mammal {
+	private Heart heart;
+	
+	public Mammal() {
+		// TODO Default::::::::::::::::Auto-generated constructor stub
+	}
+	
+//	@Autowired
+	public Mammal(Heart heart) {
+		this.heart = heart;
+	}
+//	@AUTOWIRE can also beused before setter method as bellow
+	@Autowired
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void StartPumping() {
+		if( heart != null)
+		{
+			heart.isPumping();
+		}else
+		{
+			System.out.println("Mammal is not breathing. It is dead!");
+		}
+	}
+}

@@ -1,0 +1,6 @@
+package dev4money.spring.annotation.classes;
+
+@Component
+public class College {
+
+}

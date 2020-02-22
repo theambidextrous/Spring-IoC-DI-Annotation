@@ -1,0 +1,6 @@
+//Spring dependancy injection bean example
+public class Sdi {
+	public static void main(String[] args) {
+		
+	}
+}

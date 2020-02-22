@@ -1,0 +1,10 @@
+import dev4money.classes.Play;
+
+public class App {
+	public static void main(String[] args) {
+		Play p = new Play();
+		p.Start();
+		p.Continue();
+		p.End();
+	}
+}

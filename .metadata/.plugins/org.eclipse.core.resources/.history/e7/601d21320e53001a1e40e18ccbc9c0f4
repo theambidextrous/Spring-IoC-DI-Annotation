@@ -1,0 +1,15 @@
+package dev4money.springautowired;
+
+public class Mammal {
+	private Heart heart;
+	
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void StartPumping() {
+		if( heart != null)
+			heart.isPumping();
+		System.out.println("Mammal is not breathing. It is dead!");
+	}
+}

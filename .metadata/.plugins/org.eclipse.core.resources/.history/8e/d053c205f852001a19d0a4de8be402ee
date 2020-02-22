@@ -1,0 +1,8 @@
+package dev4money.springobjinjection;
+
+public class Youth implements Bath{
+	@Override
+	public void isBathing() {
+		System.out.println("YouthBath is now taking a bath...!");
+	}
+}

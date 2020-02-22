@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+     
+     <!-- if let say implemented class is dig -->
+     <bean id="activity" class="dev4money.classes.Eat"></bean>
+     
+     <!-- Spring Dependency injection bean -->
+      <bean id="farmer" class="dev4money.classes.Farmer">
+      	<property name="NumberOfAnimals" value="4567"></property>
+      </bean>
+     <!--
+    <bean id="play" class="dev4money.classes.Play"></bean>
+    <bean id="dig" class="dev4money.classes.Dig"></bean>
+    <bean id="eat" class="dev4money.classes.Eat"></bean>
+    -->
+    
+    <!-- SPRING OBJECT DEPENDENCY INJECTION 
+    bean ==========> has id and class
+    property ======> has a name and value
+    -->
+     <!-- 
+     <bean id="person" class="dev4money.springobjinjection.Person">
+     	<property name="tb">
+     		<bean class="dev4money.springobjinjection.TakeBath"></bean>
+     	</property>
+     	<property name="tbf">
+     		<bean class="dev4money.springobjinjection.TakeBreakfast"></bean>
+     	</property>
+     </bean>
+     
+     <bean id="anotherperson" class="dev4money.springobjinjection.AnotherPerson">
+     	<property name="tb2">
+     		<bean class="dev4money.springobjinjection.TakeBath"></bean>
+     	</property>
+     	<property name="tbf2">
+     		<bean class="dev4money.springobjinjection.TakeBreakfast"></bean>
+     	</property>
+     </bean> -->
+     <!-- REFERENCES -->
+     <!-- baths -->
+     <bean id="ybath" class="dev4money.springobjinjection.YouthBath"></bean>
+     <bean id="cbath" class="dev4money.springobjinjection.ChildBath"></bean>
+     <!-- Others -->
+     <bean id="bathref" class="dev4money.springobjinjection.TakeBath"></bean>
+     <bean id="breakfastref" class="dev4money.springobjinjection.TakeBreakfast"></bean>
+     <!-- REFERENCE THE REFERENCES NOW -->
+     <bean id="person" class="dev4money.springobjinjection.Person">
+     	<property name="tb" ref="bathref"/>
+     	<property name="tbf" ref="breakfastref"/>
+     </bean>
+     
+     <bean id="anotherperson" class="dev4money.springobjinjection.AnotherPerson">
+     	<property name="atb" ref="bathref"/>
+     	<property name="atbf" ref="breakfastref"/>
+     </bean>
+     
+     
+     <!-- USE JAVA INTERFACE::::: LOOSE COUPLING IN SPRING ===> configuring code in the LEAST dependent way -->
+      <bean id="human" class="dev4money.springobjinjection.Human">
+     	<property name="bath" ref="cbath"/>
+     </bean>
+     
+</beans>

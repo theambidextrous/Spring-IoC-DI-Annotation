@@ -1,0 +1,21 @@
+package dev4money.spring.annotation.util;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import dev4money.spring.annotation.classes.*;
+
+//USING Beans.java instead of Beans.xml
+@Configuration
+@ComponentScan(basePackages = "dev4money.spring.annotation.classes")
+public class Beans {
+	public void isHappening() {
+		System.out.println("is actually happening from @componentScan in Beans.java !!!");
+	}
+	@Bean(name="bb") // you can specify name(or names:::: name={"name1,"name2"}) if u do not wantto use the method name as bean id
+	public College CollegeBean() {
+		College c = new College();
+		return c;
+	}
+}

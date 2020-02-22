@@ -1,0 +1,12 @@
+package dev4money.spring.annotation.classes;
+
+import org.springframework.stereotype.Component;
+
+//@Component("collegebean")
+// ALTERNATIVELY ===> we could remove the above4 @component annot, then define a @Beans method in Beans.java where the method name becomes our bean Id
+//check out the Beans.java for @bean
+public class College {
+	public void Test() {
+		System.out.println("Tested weeeeeeell");
+	}
+}

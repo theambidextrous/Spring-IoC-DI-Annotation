@@ -1,0 +1,7 @@
+package dev4money.springobjinjection;
+
+public class ChildBath {
+	public void Bathing() {
+		System.out.println("Child is now taking a bath...!");
+	}
+}
